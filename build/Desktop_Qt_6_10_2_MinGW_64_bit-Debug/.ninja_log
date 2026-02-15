@@ -1,0 +1,22 @@
+# ninja log v6
+58	352	7922644396054367	ArduinoSimulatorQt_autogen/timestamp	922f2f60e146f1dc
+330	3523	7922632582495226	CMakeFiles/ArduinoSimulatorQt.dir/ArduinoSimulatorQt_autogen/mocs_compilation.cpp.obj	449b5b894423f7ef
+58	352	7922644396054367	ArduinoSimulatorQt_autogen/mocs_compilation.cpp	922f2f60e146f1dc
+58	352	7922644396054367	C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/mocs_compilation.cpp	922f2f60e146f1dc
+1658	8020	7922627311038429	CMakeFiles/ArduinoSimulatorQt.dir/main.cpp.obj	ecdb4938019111dc
+355	3639	7922644399016911	CMakeFiles/ArduinoSimulatorQt.dir/mainwindow.cpp.obj	3423fdca289974ae
+58	352	7922644396054367	C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/timestamp	922f2f60e146f1dc
+549	7714	7922627563674174	CMakeFiles/ArduinoSimulatorQt.dir/gui/mainwindow.cpp.obj	7801cdbb170d8d10
+77	174	7922647124098218	CMakeFiles/clean.additional	baedbe210acaa455
+175	212	7922647125084038	clean	577b940aee94fbd7
+28	65	7922647202598354	CMakeFiles/clean.additional	baedbe210acaa455
+65	80	7922647202968234	clean	577b940aee94fbd7
+36	1218	7922647214945204	ArduinoSimulatorQt_autogen/timestamp	922f2f60e146f1dc
+36	1218	7922647214945204	ArduinoSimulatorQt_autogen/mocs_compilation.cpp	922f2f60e146f1dc
+36	1218	7922647214945204	C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/timestamp	922f2f60e146f1dc
+36	1218	7922647214945204	C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/mocs_compilation.cpp	922f2f60e146f1dc
+1246	9240	7922647216663785	CMakeFiles/ArduinoSimulatorQt.dir/main.cpp.obj	ecdb4938019111dc
+1237	9248	7922647216573763	CMakeFiles/ArduinoSimulatorQt.dir/mainwindow.cpp.obj	3423fdca289974ae
+1221	9251	7922647216408167	CMakeFiles/ArduinoSimulatorQt.dir/ArduinoSimulatorQt_autogen/mocs_compilation.cpp.obj	449b5b894423f7ef
+1228	10182	7922647216478293	CMakeFiles/ArduinoSimulatorQt.dir/gui/mainwindow.cpp.obj	7801cdbb170d8d10
+10182	10556	7922647306019568	ArduinoSimulatorQt.exe	a314b8132dde38f5
