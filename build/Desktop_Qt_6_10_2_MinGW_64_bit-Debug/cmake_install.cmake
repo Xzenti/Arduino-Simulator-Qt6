@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Dell/OneDrive/ArduinoSimulatorQt
+# Install script for directory: C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ArduinoSimulatorQt.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ArduinoSimulatorQt.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -48,7 +48,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/deploy_ArduinoSimulatorQt_7ec86b6fb2.cmake")
+  include("C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/deploy_ArduinoSimulatorQt_7ec86b6fb2.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -66,6 +66,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/Dell/OneDrive/ArduinoSimulatorQt/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

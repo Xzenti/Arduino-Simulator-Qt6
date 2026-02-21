@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-0df3b72ba265339c7e4d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ArduinoSimulatorQt",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulator-Debug-21d8bfc668ca126e179d.json",
+					"name" : "ArduinoSimulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulatorQt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulatorQt-Debug-45221cce0e382327aa97.json",
+					"name" : "ArduinoSimulatorQt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulatorQt_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulatorQt_autogen-Debug-26ccfdb01b0de1439275.json",
+					"name" : "ArduinoSimulatorQt_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulatorQt_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulatorQt_autogen_timestamp_deps-Debug-c582da88fa0d80590e75.json",
+					"name" : "ArduinoSimulatorQt_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulator_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulator_autogen-Debug-feb66cfa43e23c999d03.json",
+					"name" : "ArduinoSimulator_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArduinoSimulator_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArduinoSimulator_autogen_timestamp_deps-Debug-b7f5d3411a86ef08339b.json",
+					"name" : "ArduinoSimulator_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
