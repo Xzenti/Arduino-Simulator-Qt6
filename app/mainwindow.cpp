@@ -34,6 +34,20 @@ MainWindow::MainWindow(QWidget *parent)
     setupToolBar();
     connectSignals();
 
+    m_boardModel = std::make_unique<BoardModel>();
+    m_boardModel->setInputPinProvider([this](int pin) {
+        return m_simulatorPane->getButtonStateForPin(pin);
+    });
+    m_interpreter = std::make_unique<SketchInterpreter>(
+        m_boardModel.get(),
+        [this](int pin, int value) { onPinStateChanged(pin, value); },
+        this);
+
+    qRegisterMetaType<BuildResult>("BuildResult");
+    m_compilerService = std::make_unique<CompilerService>();
+    connect(m_compilerService.get(), &CompilerService::compilationFinished,
+            this, &MainWindow::onCompilationDone);
+
     statusBar()->showMessage("Ready");
 
     Logger::instance().log("Application initialized");
@@ -192,16 +206,17 @@ void MainWindow::onBuildClicked()
 
     m_buildAction->setEnabled(false);
     m_runAction->setEnabled(false);
+    m_stopAction->setEnabled(false);
+
 
     m_outputPane->appendMessage("[INFO] Compiling sketch...", Logger::Info);
 
-    // Simulate build process
     m_buildSucceeded = true;
-
     m_buildAction->setEnabled(true);
-    m_runAction->setEnabled(true);
+    m_runAction->setEnabled(m_buildSucceeded);
 
-    statusBar()->showMessage("Build Succeeded");
+    statusBar()->showMessage(m_buildSucceeded ? "Build Succeeded" : "Build Failed");
+    m_compilerService->compileInBackground(m_editorPane->getCode());
 }
 
 void MainWindow::onRunClicked()
