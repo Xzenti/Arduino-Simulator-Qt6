@@ -6,7 +6,7 @@
 #include <QAction>
 #include <QSplitter>
 #include <memory>
-#include "../compiler/BuildResult.h"
+#include "../complier/BuildResult.h"
 
 class EditorPane;
 class OutputPane;
