@@ -17,13 +17,11 @@ public:
     };
     Q_ENUM(LogLevel)
 
-    // Singleton accessor
     static Logger& instance() {
         static Logger _instance;
         return _instance;
     }
 
-    // Legacy method for backward compatibility
     void log(const QString &message);
 
     // New severity-based logging methods
@@ -36,14 +34,13 @@ public:
     void clear();
 
 signals:
-    void messageLogged(const QString &message, Logger::LogLevel level);
+    void messageLogged(const QString &message, LogLevel level);
     void messageLegacy(const QString &message);
 
 private:
     Logger();
     ~Logger();
 
-    // Delete copy and move constructors
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
     Logger(Logger&&) = delete;

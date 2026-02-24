@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 3.19)
 project(ArduinoSimulatorQt LANGUAGES CXX)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Widgets)
 
 qt_standard_project_setup()
 
@@ -37,6 +43,7 @@ qt_add_executable(ArduinoSimulatorQt
 target_link_libraries(ArduinoSimulatorQt
     PRIVATE
         Qt::Core
+        Qt6::Gui
         Qt::Widgets
 )
 
