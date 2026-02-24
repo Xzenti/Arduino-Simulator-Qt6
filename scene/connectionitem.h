@@ -20,7 +20,9 @@ public:
     ConnectionItem(ArduinoBoardItem *board, const QString &pinId, ButtonItem *btn, int pinNum, QGraphicsItem *parent = nullptr);
     ~ConnectionItem();
 
+    QPainterPath shape() const override;
     QRectF boundingRect() const override;
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
     ArduinoBoardItem *boardItem() const { return board_; }
@@ -45,7 +47,7 @@ private:
     ButtonItem *btn_ = nullptr;
     bool toAnode_ = true;
     int resLeg_ = 1;
-    int btnPin_ = 1;  // 1–4 for button pin
+    int btnPin_ = 1;
     QPointF fromScene_;
     QPointF toScene_;
 };

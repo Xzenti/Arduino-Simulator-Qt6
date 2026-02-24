@@ -46,6 +46,7 @@ qt_add_executable(ArduinoSimulatorQt
     ui/editortextedit.h ui/editortextedit.cpp
     ui/linenumberarea.h ui/linenumberarea.cpp
     ui/arduinohighlighter.h ui/arduinohighlighter.cpp
+    scene/componentwire.h scene/componentwire.cpp
 
 
 
