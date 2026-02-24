@@ -37,6 +37,10 @@ qt_add_executable(ArduinoSimulatorQt
     complier/buildresult.h
     complier/compilerservice.h complier/compilerservice.cpp
     complier/compilerworker.h complier/compilerworker.cpp
+    sim/Action.h
+    sim/boardmodel.h sim/boardmodel.cpp
+    sim/parser.h sim/parser.cpp
+    sim/pin.h sim/pin.cpp
 
 
 

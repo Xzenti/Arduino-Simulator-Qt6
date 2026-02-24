@@ -4,6 +4,7 @@
 #include "../ui/OutputPane.h"
 #include "../core/Logger.h"
 #include "../core/ThemeManager.h"
+#include "../sim/BoardModel.h"
 
 #include <QVBoxLayout>
 #include <QSplitter>
