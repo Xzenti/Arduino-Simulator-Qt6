@@ -5,6 +5,10 @@
 #include "../core/Logger.h"
 #include "../core/ThemeManager.h"
 #include "../sim/BoardModel.h"
+#include "../sim/SketchInterpreter.h"
+#include "../compiler/CompilerService.h"
+#include "../compiler/BuildResult.h"
+#include "../scene/LedItem.h"
 
 #include <QVBoxLayout>
 #include <QSplitter>
