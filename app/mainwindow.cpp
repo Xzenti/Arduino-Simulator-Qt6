@@ -253,6 +253,27 @@ void MainWindow::onRunClicked()
     m_executionActive = true;
 }
 
+void MainWindow::onPinStateChanged(int pin, int value) {
+    QMap<int, LedItem *> pinToLed = m_simulatorPane->getPinToLedAnodeMap();
+    auto it = pinToLed.constFind(pin);
+    if (it != pinToLed.cend() && it.value()) {
+        it.value()->setState(value != 0);
+        // Force simulator view to repaint so LED image (led_on/led_off) updates immediately
+        if (QGraphicsScene *sc = m_simulatorPane->getScene())
+            sc->update();
+        if (QGraphicsView *vw = m_simulatorPane->getView())
+            vw->viewport()->update();
+        QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents, 10);
+    } else {
+        // Warn once per pin per simulation run
+        if (!m_warnedPins.contains(pin)) {
+            m_warnedPins.insert(pin);
+            Logger::instance().warning(QString("digitalWrite(D%1): no LED anode connected to this pin")
+                                           .arg(pin));
+        }
+    }
+}
+
 void MainWindow::onPauseClicked()
 {
     if (m_executionActive) {
