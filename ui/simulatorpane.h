@@ -15,7 +15,6 @@
 class QPushButton;
 class ArduinoBoardItem;
 class QMenu;
-class BuzzerItem;
 class ComponentWire;
 
 class LedItem;
@@ -55,7 +54,6 @@ private slots:
     void onZoomIn();
     void onZoomOut();
     void showZoomMenu();
-    void onAddBuzzer();
 
     void showAddComponentMenu();
 
@@ -117,7 +115,6 @@ private:
     QList<LedItem *> ledOrder_;
     QList<ResistorItem *> resistorOrder_;
     QList<ButtonItem *> buttonOrder_;
-    QList<BuzzerItem *> buzzerOrder_;
 };
 
 #endif // SIMULATORPANE_H
