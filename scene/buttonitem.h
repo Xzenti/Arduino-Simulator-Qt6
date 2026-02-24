@@ -17,6 +17,9 @@ public:
     void setPressed(bool pressed);
     bool isPressed() const { return pressed; }
 
+    void setSimulationMode(bool active);
+    bool isSimulationMode() const { return simulationMode_; }
+
     // Pin positions in item-local coords (50×50). Use mapToScene(pin1Pos()) etc. for wiring
     QPointF pin1Pos() const;  // top-left
     QPointF pin2Pos() const;  // top-right
@@ -36,16 +39,21 @@ public:
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
+    void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 
 private:
     void loadPixmaps();
     QString pin1PinId_;
+    QString signalPinLabel() const;
     QString pin2PinId_;
     QString pin3PinId_;
     QString pin4PinId_;
     QPixmap pixmapNormal;
     QPixmap pixmapPressed;
     bool pressed = false;
+    bool simulationMode_ = false;
+    int pressCount_ = 0;
     static constexpr int MaxWidth = 50;
     static constexpr int MaxHeight = 50;
 };
