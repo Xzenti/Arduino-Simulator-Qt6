@@ -219,6 +219,20 @@ void MainWindow::onBuildClicked()
     m_compilerService->compileInBackground(m_editorPane->getCode());
 }
 
+void MainWindow::onCompilationDone(BuildResult result) {
+    if (!result.output.isEmpty())
+        m_outputPane->appendMessage(result.output);
+    int level = result.success ? static_cast<int>(Logger::Info) : static_cast<int>(Logger::Error);
+    m_outputPane->appendMessage(result.success ? "Build succeeded." : "Build failed.");
+    if (result.success)
+        Logger::instance().info("Build completed successfully");
+    else
+        Logger::instance().error("Build failed (exit code " + QString::number(result.exitCode) + ")");
+    m_buildSucceeded = result.success;
+    m_buildAction->setEnabled(true);
+    m_runAction->setEnabled(m_buildSucceeded);
+}
+
 void MainWindow::onRunClicked()
 {
     if (!m_buildSucceeded)
