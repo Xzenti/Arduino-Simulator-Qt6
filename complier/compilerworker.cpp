@@ -28,8 +28,18 @@ QString findArduinoCLIPath() {
         << home + QStringLiteral("/bin/arduino-cli.exe");
     }
     candidates << QStandardPaths::findExecutable(QStringLiteral("arduino-cli"));
+#else
+    candidates << QStringLiteral("/usr/local/bin/arduino-cli")
+               << QStringLiteral("/opt/homebrew/bin/arduino-cli")
+               << QStringLiteral("/usr/bin/arduino-cli");
+    if (!home.isEmpty()) {
+        candidates << home + QStringLiteral("/bin/arduino-cli")
+        << home + QStringLiteral("/.local/bin/arduino-cli")
+        << home + QStringLiteral("/arduino-cli");
+    }
+    candidates << QStandardPaths::findExecutable(QStringLiteral("arduino-cli"));
 #endif
-    for (const QString &path : std::as_const(candidates)) {
+    for (const QString &path : candidates) {
         if (path.isEmpty())
             continue;
         if (QFile::exists(path)) {
@@ -108,7 +118,8 @@ BuildResult CompilerWorker::runArduinoCLICompile(const QString &sketchCode) {
 
     const QString cliPath = findArduinoCLIPath();
     if (cliPath.isEmpty()) {
-        result.output = "Arduino CLI not found. Install it and ensure it is in one of: /usr/local/bin, ";
+        result.output = "Arduino CLI not found. Install it and ensure it is in one of: /usr/local/bin,  or in PATH.";
+
 #if defined(Q_OS_WIN)
         result.output = "Arduino CLI not found. Install it (e.g. from Arduino CLI installer) or add it to PATH.";
 #endif

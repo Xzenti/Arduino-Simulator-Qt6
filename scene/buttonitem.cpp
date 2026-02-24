@@ -1,13 +1,17 @@
 #include "ButtonItem.h"
 #include "PinPositions.h"
+#include "../core/Logger.h"
+
 #include <QPainter>
 #include <QGraphicsSceneMouseEvent>
 #include <QCoreApplication>
+#include <QCoreApplication>
 #include <QFileInfo>
-
+#include <QCursor>
 ButtonItem::ButtonItem(QGraphicsItem *parent)
     : QGraphicsItem(parent) {
     loadPixmaps();
+    setAcceptHoverEvents(true);
     setFlag(ItemIsSelectable);
     setFlag(ItemIsMovable);
 }
@@ -96,12 +100,81 @@ void ButtonItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
         painter->drawRect(boundingRect());
     }
 }
+QString ButtonItem::signalPinLabel() const {
+    // Check all four pin slots; return the first one that is a digital/analog signal pin
+    // (skip GND, 5V, 3.3V — those are power, not the signal the sketch reads)
+    static const QStringList powerPins = { "GND", "5V", "3.3V", "VIN", "RESET", "IOREF", "AREF" };
+    const QString pins[4] = { pin1PinId_, pin2PinId_, pin3PinId_, pin4PinId_ };
+    for (const QString &id : pins) {
+        if (!id.isEmpty() && !powerPins.contains(id, Qt::CaseInsensitive))
+            return id;  // e.g. "D2", "D3", "A0"
+    }
+    // Fallback: return any connected pin, or "unassigned"
+    for (const QString &id : pins) {
+        if (!id.isEmpty())
+            return id;
+    }
+    return "unassigned";
+}
 
 void ButtonItem::setPressed(bool p) {
     if (pressed != p) {
         pressed = p;
+        if (simulationMode_ && p) {
+            ++pressCount_;
+            // Log only the first press
+            if (pressCount_ == 1) {
+                Logger::instance().info(
+                    QString("Button (pin %1) activated — input pulled LOW")
+                        .arg(signalPinLabel()));
+            }
+        }
         update();
     }
+}
+
+void ButtonItem::setSimulationMode(bool active) {
+    if (simulationMode_ == active)
+        return;
+    simulationMode_ = active;
+
+    if (active) {
+        // Entering simulation: reset interaction counter, lock position
+        pressCount_ = 0;
+        setFlag(ItemIsMovable, false);
+        setFlag(ItemIsSelectable, false);
+        setCursor(Qt::PointingHandCursor);
+    } else {
+        // Leaving simulation: log summary if button was used, restore design mode
+        if (pressCount_ > 0) {
+            Logger::instance().info(
+                QString("Button (pin %1): %2 press%3 during simulation")
+                    .arg(signalPinLabel())
+                    .arg(pressCount_)
+                    .arg(pressCount_ == 1 ? "" : "es"));
+        }
+        pressCount_ = 0;
+        setFlag(ItemIsMovable, true);
+        setFlag(ItemIsSelectable, true);
+        unsetCursor();
+        // Ensure button is released when simulation stops
+        if (pressed) {
+            pressed = false;
+            update();
+        }
+    }
+}
+
+void ButtonItem::hoverEnterEvent(QGraphicsSceneHoverEvent *event) {
+    Q_UNUSED(event);
+    if (simulationMode_)
+        setCursor(Qt::PointingHandCursor);
+}
+
+void ButtonItem::hoverLeaveEvent(QGraphicsSceneHoverEvent *event) {
+    Q_UNUSED(event);
+    if (simulationMode_)
+        setCursor(Qt::PointingHandCursor);  // keep hand while in sim mode
 }
 
 void ButtonItem::mousePressEvent(QGraphicsSceneMouseEvent *event) {

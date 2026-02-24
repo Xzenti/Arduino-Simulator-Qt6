@@ -22,12 +22,13 @@ CompilerService::~CompilerService() {
 }
 
 BuildResult CompilerService::compile(const QString &sketchCode) {
-    BuildResult result;
+    //BuildResult result;
 
     // Stub implementation for now
-    result.success = true;
+    /*esult.success = true;
     result.output = "Compilation successful (stub)";
     result.exitCode = 0;
+    */
     return CompilerWorker::runArduinoCLICompile(sketchCode);
 }
 
