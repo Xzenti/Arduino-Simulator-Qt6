@@ -235,10 +235,15 @@ void MainWindow::onCompilationDone(BuildResult result) {
 
 void MainWindow::onRunClicked()
 {
-    if (!m_buildSucceeded)
+    if (!m_buildSucceeded) {
+        Logger::instance().error("Cannot run: build the sketch first");
         return;
+    }
 
     statusBar()->showMessage("Running simulation...");
+    m_simulatorPane->setSimulationRunning(true);
+    m_interpreter->setCode(m_editorPane->getCode());
+    m_interpreter->start();
 
     m_buildAction->setEnabled(false);
     m_runAction->setEnabled(false);
@@ -251,10 +256,12 @@ void MainWindow::onRunClicked()
 void MainWindow::onPauseClicked()
 {
     if (m_executionActive) {
+        if (m_interpreter) m_interpreter->pause();
         statusBar()->showMessage("Paused");
         m_pauseAction->setText("Resume");
         m_executionActive = false;
     } else {
+        if (m_interpreter) m_interpreter->resume();
         statusBar()->showMessage("Running...");
         m_pauseAction->setText("Pause");
         m_executionActive = true;
@@ -264,13 +271,17 @@ void MainWindow::onPauseClicked()
 void MainWindow::onStopClicked()
 {
     statusBar()->showMessage("Stopped");
+    m_simulatorPane->setSimulationRunning(false);
+
+    if (m_interpreter && m_interpreter->isRunning())
+        m_interpreter->stop();
+    m_simulatorPane->resetAllLeds();
 
     m_buildAction->setEnabled(true);
     m_runAction->setEnabled(m_buildSucceeded);
     m_pauseAction->setEnabled(false);
     m_pauseAction->setText("Pause");
     m_stopAction->setEnabled(false);
-
     m_executionActive = false;
 }
 
