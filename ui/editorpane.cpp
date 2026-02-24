@@ -1,12 +1,14 @@
 #include "EditorPane.h"
 #include <QVBoxLayout>
 #include <QLabel>
+#include "../core/ThemeManager.h"
+
 #include <QFile>
 #include <QTextStream>
 
 EditorPane::EditorPane(QWidget *parent)
     : QWidget(parent),
-    codeEditor(std::make_unique<QPlainTextEdit>())
+    codeEditor(std::make_unique<QPlainTextEdit>()),highlighter(nullptr)
 {
     setupUI();
     applyTheme(true);  // default dark mode
@@ -70,6 +72,9 @@ QString EditorPane::getCode() const
 void EditorPane::setCode(const QString &code)
 {
     codeEditor->setPlainText(code);
+    m_currentContent = code;
+    m_savedContent = code;  // When setting code, consider it as saved state
+    updateUnsavedIndicator();
 }
 
 void EditorPane::clear()
@@ -101,6 +106,19 @@ bool EditorPane::saveToFile(const QString &filePath)
     return true;
 }
 
+void EditorPane::onContentChanged() {
+    // Update current content and check if it differs from saved
+    m_currentContent = codeEditor->toPlainText();
+    updateUnsavedIndicator();
+}
+
+void EditorPane::updateUnsavedIndicator() {
+    // Update the dirty indicator in the line number area
+    // Show ribbon only if current content differs from saved content
+    //LineNumberArea *lineNumberArea = codeEditor->getLineNumberArea();
+    /*bool isDifferent = (m_currentContent != m_savedContent);
+    lineNumberArea->setDirty(isDifferent); */ // Show ribbon only if content differs from saved
+}
 //////////////////////////////////////////////////////////////
 // THEME SYSTEM
 //////////////////////////////////////////////////////////////

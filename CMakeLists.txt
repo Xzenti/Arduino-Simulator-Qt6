@@ -43,6 +43,9 @@ qt_add_executable(ArduinoSimulatorQt
     sim/pin.h sim/pin.cpp
     sim/runtime.h sim/runtime.cpp
     sim/sketchinterpreter.h sim/sketchinterpreter.cpp
+    ui/editortextedit.h ui/editortextedit.cpp
+    ui/linenumberarea.h ui/linenumberarea.cpp
+    ui/arduinohighlighter.h ui/arduinohighlighter.cpp
 
 
 

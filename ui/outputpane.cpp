@@ -1,4 +1,6 @@
 #include "OutputPane.h"
+#include "../core/Logger.h"
+
 #include "../core/ThemeManager.h"
 #include <QVBoxLayout>
 #include <QTextCursor>
