@@ -41,6 +41,8 @@ qt_add_executable(ArduinoSimulatorQt
     sim/boardmodel.h sim/boardmodel.cpp
     sim/parser.h sim/parser.cpp
     sim/pin.h sim/pin.cpp
+    sim/runtime.h sim/runtime.cpp
+    sim/sketchinterpreter.h sim/sketchinterpreter.cpp
 
 
 
