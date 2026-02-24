@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 49,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 39,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -324,7 +324,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/include"
+					"path" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/include"
 				},
 				{
 					"backtrace" : 13,

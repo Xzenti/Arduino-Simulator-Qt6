@@ -1,5 +1,5 @@
-C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/TAC5DWH4SE/moc_thememanager.cpp: C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/core/thememanager.h \
-  C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/moc_predefs.h \
+C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/TAC5DWH4SE/moc_thememanager.cpp: C:/Users/Dell/Arduino-Simulator-Qt6/core/thememanager.h \
+  C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/moc_predefs.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.10.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q17memory.h \

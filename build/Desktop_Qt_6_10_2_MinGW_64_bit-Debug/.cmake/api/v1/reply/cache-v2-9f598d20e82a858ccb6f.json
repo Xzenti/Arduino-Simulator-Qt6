@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug"
+			"value" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "ArduinoSimulatorQt_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6"
+			"value" : "C:/Users/Dell/Arduino-Simulator-Qt6"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug"
+			"value" : "c:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6"
+			"value" : "C:/Users/Dell/Arduino-Simulator-Qt6"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake"
+			"value" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",

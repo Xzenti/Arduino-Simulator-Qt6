@@ -1,20 +1,73 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6",
+	"BUILD_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/CMakeLists.txt",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/package-manager.cmake",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/CMakeLists.txt",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/package-manager.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qtcreator/cmake-helper/maintenance_tool_provider.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -27,11 +80,27 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake",
-		"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
+		"C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"C:/Qt/6.10.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake",
 		"C:/Qt/6.10.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake",
 		"C:/Qt/6.10.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
@@ -318,94 +387,94 @@
 		"C:/Qt/6.10.2/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/deps",
+	"DEP_FILE" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "ArduinoSimulatorQt_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/app/mainwindow.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/app/mainwindow.h",
 			"MU",
 			"VJIZ3MDCXP/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/core/logger.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/core/logger.h",
 			"MU",
 			"TAC5DWH4SE/moc_logger.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/core/thememanager.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/core/thememanager.h",
 			"MU",
 			"TAC5DWH4SE/moc_thememanager.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/PinPositions.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/PinPositions.h",
 			"MU",
 			"QSLIUTEOWB/moc_PinPositions.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/ThemedScene.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/ThemedScene.h",
 			"MU",
 			"QSLIUTEOWB/moc_ThemedScene.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/arduinoboarditem.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/arduinoboarditem.h",
 			"MU",
 			"QSLIUTEOWB/moc_arduinoboarditem.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/buttonitem.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/buttonitem.h",
 			"MU",
 			"QSLIUTEOWB/moc_buttonitem.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/connectionitem.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/connectionitem.h",
 			"MU",
 			"QSLIUTEOWB/moc_connectionitem.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/leditem.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/leditem.h",
 			"MU",
 			"QSLIUTEOWB/moc_leditem.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/resistoritem.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/resistoritem.h",
 			"MU",
 			"QSLIUTEOWB/moc_resistoritem.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/editorpane.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/ui/editorpane.h",
 			"MU",
 			"UYX5XTB5RZ/moc_editorpane.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/outputpane.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/ui/outputpane.h",
 			"MU",
 			"UYX5XTB5RZ/moc_outputpane.cpp",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/simulatorpane.h",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/ui/simulatorpane.h",
 			"MU",
 			"UYX5XTB5RZ/moc_simulatorpane.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -460,77 +529,57 @@
 		"-c",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ArduinoSimulatorQt_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 2,
-	"PARSE_CACHE_FILE" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/ArduinoSimulatorQt_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/ArduinoSimulatorQt_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.10.2/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.10.2/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 10,
-	"SETTINGS_FILE" : "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/ArduinoSimulatorQt_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/Dell/Arduino-Simulator-Qt6/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CMakeFiles/ArduinoSimulatorQt_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/app/mainwindow.cpp", "MU", null ],
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/core/logger.cpp", "MU", null ],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/app/mainwindow.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/core/thememanager.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/main.cpp", "MU", null ],
+		[
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/PinPositions.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/core/logger.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/arduinoboarditem.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/core/thememanager.cpp",
-			"MU",
-			null
-		],
-		[ "C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/main.cpp", "MU", null ],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/PinPositions.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/buttonitem.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/arduinoboarditem.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/connectionitem.cpp",
 			"MU",
 			null
 		],
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/scene/leditem.cpp", "MU", null ],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/buttonitem.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/scene/resistoritem.cpp",
 			"MU",
 			null
 		],
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/ui/editorpane.cpp", "MU", null ],
+		[ "C:/Users/Dell/Arduino-Simulator-Qt6/ui/outputpane.cpp", "MU", null ],
 		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/connectionitem.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/leditem.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/scene/resistoritem.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/editorpane.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/outputpane.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Dell/OneDrive/Arduino-Simulator-Qt6/ui/simulatorpane.cpp",
+			"C:/Users/Dell/Arduino-Simulator-Qt6/ui/simulatorpane.cpp",
 			"MU",
 			null
 		]

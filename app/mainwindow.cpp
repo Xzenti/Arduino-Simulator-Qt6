@@ -17,7 +17,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
     m_editorPane(std::make_unique<EditorPane>()),
-    //m_simulatorPane(std::make_unique<SimulatorPane>()),
+    m_simulatorPane(std::make_unique<SimulatorPane>()),
     m_outputPane(std::make_unique<OutputPane>(nullptr, "Compiler Output")),
     m_debugPane(std::make_unique<OutputPane>(nullptr, "Debug Log"))
 {
@@ -96,7 +96,7 @@ void MainWindow::setupUI()
 
     // Build the main horizontal splitter: editor | simulator | right panel
     m_mainSplitter->addWidget(m_editorPane.get());     // left
-    //m_mainSplitter->addWidget(m_simulatorPane.get());  // center
+    m_mainSplitter->addWidget(m_simulatorPane.get());  // center
     m_mainSplitter->addWidget(m_rightSplitter);        // right (vertical splitter)
 
     // Set stretch factors: simulator gets more space, editor and right panel get equal
@@ -283,7 +283,7 @@ void MainWindow::onThemeToggled()
     m_editorPane->applyTheme(dark);
     m_outputPane->applyTheme();
     m_debugPane->applyTheme();
-    //m_simulatorPane->applyTheme();
+    m_simulatorPane->applyTheme();
 
     statusBar()->showMessage(dark ? "Dark Mode Enabled"
                                   : "Light Mode Enabled");
