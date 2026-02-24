@@ -1,38 +1,61 @@
-#ifndef ARDUINOHIGHLIGHTER_H
-#define ARDUINOHIGHLIGHTER_H
+#include "ArduinoHighlighter.h"
+#include <QTextDocument>
 
-#include <QSyntaxHighlighter>
-#include <QRegularExpression>
-#include <QVector>
-#include <QTextCharFormat>
+ArduinoHighlighter::ArduinoHighlighter(QTextDocument *parent)
+    : QSyntaxHighlighter(parent) {
 
-class QTextDocument;
+    preprocessorFormat.setForeground(QColor(215, 58, 73));
+    HighlightingRule preprocessorRule;
+    preprocessorRule.pattern = QRegularExpression("^\\s*#.*");
+    preprocessorRule.format = preprocessorFormat;
+    highlightingRules.append(preprocessorRule);
 
-class ArduinoHighlighter : public QSyntaxHighlighter {
-    Q_OBJECT
+    keywordFormat.setForeground(QColor(215, 58, 73));
+    keywordFormat.setFontWeight(QFont::Bold);
 
-public:
-    explicit ArduinoHighlighter(QTextDocument *parent = nullptr);
+    QStringList keywords;
+    keywords << "\\bvoid\\b" << "\\bint\\b" << "\\bfloat\\b" << "\\bdouble\\b"
+             << "\\bbool\\b" << "\\bchar\\b" << "\\breturn\\b" << "\\bif\\b"
+             << "\\belse\\b" << "\\bfor\\b" << "\\bwhile\\b" << "\\bclass\\b"
+             << "\\bstruct\\b" << "\\bpublic\\b" << "\\bprivate\\b" << "\\bsetup\\b"
+             << "\\bloop\\b" << "\\bSerial\\b" << "\\bdelay\\b";
 
-protected:
-    void highlightBlock(const QString &text) override;
+    for (const QString &pattern : keywords) {
+        HighlightingRule rule;
+        rule.pattern = QRegularExpression(pattern);
+        rule.format = keywordFormat;
+        highlightingRules.append(rule);
+    }
 
-private:
-    struct HighlightingRule {
-        QRegularExpression pattern;
-        QTextCharFormat format;
-    };
+    commentFormat.setForeground(QColor(106, 115, 125));
+    commentFormat.setFontItalic(true);
 
-    QVector<HighlightingRule> highlightingRules;
+    HighlightingRule singleLineCommentRule;
+    singleLineCommentRule.pattern = QRegularExpression("//[^\n]*");
+    singleLineCommentRule.format = commentFormat;
+    highlightingRules.append(singleLineCommentRule);
 
-    QTextCharFormat keywordFormat;
-    QTextCharFormat typeFormat;
-    QTextCharFormat numberFormat;
-    QTextCharFormat stringFormat;
-    QTextCharFormat charFormat;
-    QTextCharFormat commentFormat;
-    QTextCharFormat preprocessorFormat;
-    QTextCharFormat functionFormat;
-};
+    stringFormat.setForeground(QColor(3, 47, 98));
+    HighlightingRule stringRule;
+    stringRule.pattern = QRegularExpression("\".*?\"");
+    stringRule.format = stringFormat;
+    highlightingRules.append(stringRule);
 
-#endif // ARDUINOHIGHLIGHTER_H
+    numberFormat.setForeground(QColor(0, 92, 197));
+    HighlightingRule numberRule;
+    numberRule.pattern = QRegularExpression("\\b[0-9]+\\b");
+    numberRule.format = numberFormat;
+    highlightingRules.append(numberRule);
+}
+
+void ArduinoHighlighter::highlightBlock(const QString &text) {
+    for (const HighlightingRule &rule : highlightingRules) {
+        QRegularExpressionMatchIterator matchIterator = rule.pattern.globalMatch(text);
+        while (matchIterator.hasNext()) {
+            QRegularExpressionMatch match = matchIterator.next();
+            setFormat(match.capturedStart(), match.capturedLength(), rule.format);
+        }
+    }
+
+    setCurrentBlockState(0);
+}

@@ -8,9 +8,16 @@
 #include <QMap>
 #include <QTimer>
 #include <memory>
+#include <QList>
+#include <QPair>
+#include <QSet>
 
 class QPushButton;
 class ArduinoBoardItem;
+class QMenu;
+class BuzzerItem;
+class ComponentWire;
+
 class LedItem;
 class ResistorItem;
 class ButtonItem;
@@ -27,6 +34,13 @@ public:
     QGraphicsView *getView() const { return view.get(); }
     void applyTheme();  // Stub for now
 
+    QMap<int, LedItem *> getPinToLedAnodeMap() const;
+    int getButtonStateForPin(int pinNumber) const;
+
+    void setSimulationRunning(bool running);
+    // Turn off all LEDs (call when simulation stops)
+    void resetAllLeds();
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -41,6 +55,8 @@ private slots:
     void onZoomIn();
     void onZoomOut();
     void showZoomMenu();
+    void onAddBuzzer();
+
     void showAddComponentMenu();
 
 private:
@@ -48,7 +64,8 @@ private:
     void setupToolbar();
     void expandSceneRectIfNeeded(qreal x, qreal y, qreal w, qreal h);
     void fitViewToScene();
-    QPointF componentDropPosition(qreal itemWidth, int stackIndex) const;
+    int totalComponentCount() const;
+    QPointF componentDropPosition(qreal itemWidth, int batch, int indexInBatch) const;
     void updateToolbarButtonPositions();
     void setAnodeConnection(LedItem *led, const QString &pinId);
     void setCathodeConnection(LedItem *led, const QString &pinId);
@@ -61,6 +78,20 @@ private:
     void setButtonPin3Connection(ButtonItem *btn, const QString &pinId);
     void setButtonPin4Connection(ButtonItem *btn, const QString &pinId);
     void removeConnectionForButton(ButtonItem *btn);
+
+    void removeComponentWiresFromTerminal(QGraphicsItem *item, int terminalIndex);
+    void removeComponentWiresForComponent(QGraphicsItem *item);
+    void addComponentWire(QGraphicsItem *fromItem, int fromTerminalIndex,
+                          QGraphicsItem *toItem, int toTerminalIndex);
+    void addConnectToComponentSubmenu(QMenu *menu, QGraphicsItem *fromItem, int fromTerminalIndex);
+    QString getComponentTerminalLabel(QGraphicsItem *item, int terminalIndex) const;
+    void refreshAllComponentWireTooltips();
+
+    // Resolve which component terminals are electrically connected to a board pin (follows component wires)
+    using TerminalRef = QPair<QGraphicsItem *, int>;
+    QList<TerminalRef> getTerminalsConnectedToPin(const QString &pinId) const;
+    QList<TerminalRef> getReachableTerminals(const QList<TerminalRef> &start) const;
+
 
     std::unique_ptr<QGraphicsScene> scene;
     std::unique_ptr<QGraphicsView> view;
@@ -79,7 +110,14 @@ private:
     QMap<ButtonItem *, ConnectionItem *> buttonPin2Connections;
     QMap<ButtonItem *, ConnectionItem *> buttonPin3Connections;
     QMap<ButtonItem *, ConnectionItem *> buttonPin4Connections;
+    QList<ComponentWire *> componentWires;
+
     QTimer *connectionUpdateTimer = nullptr;
+
+    QList<LedItem *> ledOrder_;
+    QList<ResistorItem *> resistorOrder_;
+    QList<ButtonItem *> buttonOrder_;
+    QList<BuzzerItem *> buzzerOrder_;
 };
 
 #endif // SIMULATORPANE_H
