@@ -34,6 +34,11 @@ qt_add_executable(ArduinoSimulatorQt
     scene/PinPositions.cpp
     scene/ThemedScene.h
     scene/PinPositions.h
+    complier/buildresult.h
+    complier/compilerservice.h complier/compilerservice.cpp
+    complier/compilerworker.h complier/compilerworker.cpp
+
+
 
 
 
